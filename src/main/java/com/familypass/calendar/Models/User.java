@@ -1,14 +1,21 @@
-package com.techelevator.familypass.model;
+package com.familypass.calendar.Models;
 
-public class users {
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+public class User {
 
 	private long userId;
 	private String userName;
 	private String firstName;
 	private String lastName;
+	@Pattern(regexp = "[A-Z]{2}")
 	private String userState;
 	private String userCity;
+	@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(?:[a-zA-Z]{2,6})$")
+	@Size(max = 256)
 	private String userEmail;
+	@Size(max = 10)
 	private String userZip;
 	private String userPassword;
 	

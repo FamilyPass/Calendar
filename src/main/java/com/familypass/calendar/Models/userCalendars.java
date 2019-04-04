@@ -1,4 +1,4 @@
-package com.techelevator.familypass.model;
+package com.familypass.calendar.Models;
 
 public class userCalendars {
 	private long userId;
