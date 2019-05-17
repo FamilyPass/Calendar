@@ -3,8 +3,9 @@ package com.familypass.calendar.Models;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 
-public class EventForms {
+public class Events {
     private long userId;
     private long eventId;
     private long calendarId;
@@ -15,6 +16,8 @@ public class EventForms {
     private String eventDescription;
     private String eventGuest;
     private Timestamp eventNotification;
+    // List of Users to select who to add to an event
+    private List<User> addedUsers;
 
     public long getUserId() {
         return userId;
@@ -94,5 +97,13 @@ public class EventForms {
 
     public void setEventNotification(Timestamp eventNotification) {
         this.eventNotification = eventNotification;
+    }
+
+    public List<User> getAddedUsers() {
+        return addedUsers;
+    }
+
+    public void setAddedUsers(List<User> addedUsers) {
+        this.addedUsers = addedUsers;
     }
 }
